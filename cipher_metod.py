@@ -1,6 +1,6 @@
 def caesar(plainText, shift):
   cipherText = ""
-  for ch in plainText:
+  for ch in plainText.lower():
     if ch.isalpha():
       stayInAlphabet = ord(ch) + shift
       if stayInAlphabet > ord('z'):
@@ -8,4 +8,5 @@ def caesar(plainText, shift):
       finalLetter = chr(stayInAlphabet)
       cipherText += finalLetter
   return cipherText
+
 
