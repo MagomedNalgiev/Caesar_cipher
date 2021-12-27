@@ -124,10 +124,7 @@ def fio_step(message):
 
 def age_step(message, user_info):
     user_info['shift1'] = message.text
-    bot.send_message(message.chat.id, f'Твой зашифрованный текст:\n '
-                                      f'{cipher_metod.caesar(str(user_info["plain"]), int(user_info["shift1"]))}\n'
-                     '\nНовый шифр: /encrypt'
-                     )
+    bot.send_message(message.chat.id, f'Твой зашифрованный текст:\n{cipher_metod.caesar(str(user_info["plain"]), int(user_info["shift1"]))}\n\nНовый шифр: /encrypt')
 
 
 @bot.message_handler(commands=['help'])
